@@ -609,10 +609,11 @@
         };
 
         // 開啟 Google Maps 導航
-        const openNavigation = (title) => {
-          const url = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(title)}&travelmode=transit`;
-          window.open(url, '_blank');
-        };
+      // 修正後的正確官方導航網址寫法
+          const openNavigation = (title) => {
+            const url = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(title)}`;
+            window.open(url, '_blank');
+          };
 
         // 新增行程 Modal 控制
         const openAddEventModal = () => {
